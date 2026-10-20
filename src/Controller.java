@@ -3,24 +3,24 @@ import java.util.ArrayList;
 public class Controller {
     private MovieCollection movieCollection = new MovieCollection();
 
-    public void addMovie(String title, String genre){
-
+    public void addMovie(String title, String director, String genre, int yearCreated, boolean inColor, int lengthInMinutes){
+       // MovieCollection.addMovie(title, director, genre, yearCreated, inColor, lengthInMinutes);
     }
 
     public ArrayList<Movie> getMovies(){
-        return null;
+        return movieCollection.getMovies();
     }
 
     public ArrayList<Movie> searchMovies(String searchtext){
-        return null;
+        return movieCollection.searchMovies(searchtext);
     }
 
-    public boolean editMovie(Movie movie, String title, String genre){
-        return false;
+    public boolean editMovie(Movie movie, String title, String genre,String director, int yearCreated, boolean inColor, int lengthInMinutes){
+        return movieCollection.editMovie(movie, title, genre, yearCreated, inColor, lengthInMinutes, director);
     }
 
     public boolean deleteMovie(Movie movie){
-        return false;
+        return movieCollection.deleteMovie(movie);
     }
     //Det eneste, UserInterface taler med. Sender videre til MovieCollection
     //Må ikke: udskrive eller læse input
