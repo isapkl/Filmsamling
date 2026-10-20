@@ -4,20 +4,24 @@ public class MovieCollection {
     private ArrayList<Movie> movies = new ArrayList<>();
 
 
-    public void addMovie(String title, String genre){
-
+    public void addMovie(String title, String director, int yearCreated, boolean inColor,
+                         int lengthInMinutes, String genre)
+    {
+Movie movie= new Movie(title, director, yearCreated, inColor, lengthInMinutes, genre);
+movies.add(movie);
     }
 
     public ArrayList<Movie> getMovies(){
-        return null;
+        return movies;
     }
 
     public int getNumberOfMovies(){
-        return 0;
+        return movies.size();
     }
 
     // Finder alle film, hvor søgeteksten indgår i titlen – uanset store og små bogstaver
-    public ArrayList<Movie> searchMovies(String searchText) {
+    public ArrayList<Movie> searchMovies(String searchText)
+    {
         ArrayList<Movie> matches = new ArrayList<>();
         String text = searchText.toLowerCase();
         for (Movie movie : movies) {
@@ -28,7 +32,7 @@ public class MovieCollection {
         return matches;
     }
 
-    public boolean editMovie(Movie movie, String title, String genre){
+    public boolean editMovie(Movie movie, String title, String director, int yearCreated, boolean inColor, int lengthInMinutes, String genre){
         return false;
     }
 
