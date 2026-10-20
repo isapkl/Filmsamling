@@ -8,19 +8,19 @@ public class Controller {
     }
 
     public ArrayList<Movie> getMovies(){
-        return null;
+        return movieCollection.getMovies();
     }
 
     public ArrayList<Movie> searchMovies(String searchtext){
-        return null;
+        return movieCollection.searchMovies(searchtext);
     }
 
-    public boolean editMovie(Movie movie, String title, String genre){
-        return false;
+    public boolean editMovie(Movie movie, String title, String genre,String director, int yearCreated, boolean inColor, int lengthInMinutes){
+        return movieCollection.editMovie(movie, title, genre, yearCreated, inColor, lengthInMinutes, director);
     }
 
     public boolean deleteMovie(Movie movie){
-        return false;
+        return movieCollection.deleteMovie(movie);
     }
     //Det eneste, UserInterface taler med. Sender videre til MovieCollection
     //Må ikke: udskrive eller læse input
