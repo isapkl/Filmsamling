@@ -47,7 +47,7 @@ movies.add(movie);
     }
 
     public boolean deleteMovie(Movie movie){
-        return false;
+        return movies.remove(movie);
     }
 
     //Ejer listen af film: opretter, finder, retter og fjerner
