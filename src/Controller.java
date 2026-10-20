@@ -15,8 +15,8 @@ public class Controller {
         return movieCollection.getMovies();
     }
 
-    public ArrayList<Movie> searchMovies(String searchtext){
-        return movieCollection.searchMovies(searchtext);
+    public void searchMovies(String searchtext){
+        movieCollection.searchMovies(searchtext);
     }
 
     public boolean editMovie(Movie movie, String title, String genre,String director, int yearCreated, boolean inColor, int lengthInMinutes){
