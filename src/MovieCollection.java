@@ -32,7 +32,17 @@ movies.add(movie);
         return matches;
     }
 
-    public boolean editMovie(Movie movie, String title, String director, int yearCreated, boolean inColor, int lengthInMinutes, String genre){
+    public boolean editMovie(Movie movie, String title, String director, int yearCreated, boolean inColor, int lengthInMinutes, String genre) {
+        if (movies.contains(movie)){
+            movie.setTitle(title);
+            movie.setDirector(director);
+            movie.setGenre(genre);
+            movie.setLengthInMinutes(lengthInMinutes);
+            movie.setYearCreated(yearCreated);
+            movie.setInColor(inColor);
+
+            return true;
+        }
         return false;
     }
 
