@@ -30,6 +30,32 @@ public class Movie {
         this.title = title;
     }
 
+    public String getDirector()
+    { return director;}
+
+    public int getYearCreated()
+    {return yearCreated;}
+
+    public int getLengthInMinutes()
+    {return lengthInMinutes;}
+
+    public String getGenre()
+    {return genre;}
+
+    public void setDirector(String director){
+        this.director= director;}
+
+    public void setYearCreated(int yearCreated){
+        this.yearCreated= yearCreated;}
+
+    public void setInColor(boolean inColor){
+        this.inColor= inColor;}
+
+    public void setLengthInMinutes(int lengthInMinutes){
+        this.lengthInMinutes=lengthInMinutes;}
+
+    public void setGenre(String genre){
+        this.genre=genre;}
 
     //Én films oplysninger
     //Må ikke: udskrive eller læse input
